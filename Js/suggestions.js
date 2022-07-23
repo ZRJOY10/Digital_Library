@@ -1,0 +1,21 @@
+let suggestions = [
+    "How to make a cup of coffee",
+    "Jahangirnagar University",
+    "Dhaka University",
+    "Jagannath University",
+    "Digital Library",
+    "Rajshahi University",
+    "How to go Dhaka",
+    "Youtube",
+    "Facebook",
+    "Facebook channel",
+    "Youtube channel",
+    "Web developer",
+    "Web developer",
+    "Code with us",
+    "Code with none",
+    "How to make a mango juice",
+    "How to do freelancer",
+    "How to learn Html & Css",
+
+];
