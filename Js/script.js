@@ -2,13 +2,51 @@ const searchList = document.querySelector(".searchBox");
 const inputBox = document.querySelector("input");
 const suggBox = document.querySelector(".autocom-box");
 let searchBtn = document.querySelector(".s_icon");
+let input = document.getElementById("inputValue");
+
+
 let menuBtn = document.querySelector(".menua");
 document.querySelector('#menu-btn').onclick = () =>{
     menuBtn.classList.toggle('active');
+    userBtn.classList.remove('active');
+    impoBtn.classList.remove('active');
 }
+
+let userBtn = document.querySelector(".user");
+document.querySelector('#user-btn').onclick = () =>{
+    userBtn.classList.toggle('active');
+    menuBtn.classList.remove('active');
+    impoBtn.classList.remove('active');
+}
+
+let impoBtn = document.querySelector(".ImportantLink");
+document.querySelector('#impBtn').onclick = () =>{
+    impoBtn.classList.toggle('active');
+    userBtn.classList.remove('active');
+}
+
 window.onscroll = () =>{
     menuBtn.classList.remove('active');
+    userBtn.classList.remove('active');
+    impoBtn.classList.remove('active');
 }
+
+let valueDisplay = document.querySelectorAll(".num");
+let interval = 1000;
+valueDisplay.forEach((valueDisplay) =>{
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(interval / endValue);
+    let counter = setInterval(function(){
+        startValue +=7;
+        valueDisplay.textContent = startValue;
+        if(startValue >= endValue ){
+            clearInterval(counter);
+            valueDisplay.textContent = endValue;   
+        }
+    },duration);
+});
+
 inputBox.onkeyup = (e)=>{
     let userData = e.target.value;
     let emptyArray = [];
@@ -53,7 +91,28 @@ function showSuggestions(list){
 }
 
 searchBtn.onclick = function(){
+    let searchBy = document.querySelector(".searchBy");
+    let searchIn = searchBy.options[searchBy.selectedIndex].value;
+    if(inputBox.value == '' || inputBox.value == ' '){
+        let warn = document.querySelector(".filter p");
+        warn.classList.toggle("active");
+    }
+    else{
+    if(searchIn == 'Google Search'){
     let url = 'https://www.google.com/search?q='+inputBox.value;
     window.open(url);
+    }
+    else{
+        let url = 'https://www.google.com/search?q='+inputBox.value+'+'+searchIn;
+        window.open(url);
+            
+    }}
     /*window.open(url,'_self')*/
 }
+
+input.addEventListener("keyup", function(event){
+    if(event.keyCode == 13){
+        event.preventDefault();
+        searchBtn.click();
+    }
+});

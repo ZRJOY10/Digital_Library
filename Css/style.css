@@ -1,0 +1,618 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;1,500&display=swap');
+:root{
+    --main-clr:#2E8DED;
+    --black:#130f40;
+    --dark-color:#035BBB;
+    --box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+    --border:1rem solid rgba(0,0,0,0.1);
+    --outline:.2rem solid rgba(0,0,0,0.1);
+    --outline-hover: 0.2rem solid var(--black);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transform: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background: #fff;
+
+}
+
+.header{
+    position: fixed;
+    top:0; left:0;right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem ;
+    background: #fff;
+    box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+    max-height: 80px;
+    z-index: 2000;
+    
+}
+.header .navbar{
+    width: 60%;
+    justify-content: space-around;
+    display: flex;
+    right: 0;
+
+}
+.header .logo{
+    margin-right: 10rem;
+    margin-left: 0;
+
+}
+
+.header .logo img{
+    overflow: hidden;
+    margin-top: 1rem;
+    height: 65px;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: none;
+    color: var(--main-clr);
+    font-size: 2.3rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.header .icons div:hover{
+    background: var(--main-clr);
+    color: #fff;
+}
+
+#menu-btn{
+    display: none;
+}
+#home-icon2{
+    display: none;
+}
+.header .home-icons div{
+    height: 5.5rem;
+    width: 5.5rem;
+    padding-top: 1.75rem;
+    border-radius: .5rem;
+    background: transparent;
+    color: var(--main-clr);
+    font-size: 3rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.header .home-icons div:hover{
+    color: var(--dark-color);
+    font-size: 3.25rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    border-radius: 1rem;
+    border-bottom: 2px solid var(--dark-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: var(--dark-color);
+    color:#fff;
+    border: 0;
+    box-shadow: 0 0 35px var(--dark-color);
+}
+.header .user{
+    position: absolute;
+    top: 110%;
+    right: -110% ;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 15rem;
+    background-color: #fff;
+}
+.header .user.active{
+    position: absolute;
+    top: 110%;
+    right: 2rem ;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 15rem;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+.header .ImportantLink{
+    position: absolute;
+    top: 110%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 15rem;
+    background-color: #fff;
+    z-index: -1;
+    display: none;
+}
+.header .ImportantLink.active{
+    position: absolute;
+    top: 110%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    width: 15rem;
+    background-color: rgb(247, 242, 242);
+    transition: 0.5s;
+    display: block;
+}
+
+section{
+    padding: 1rem 9%;
+}
+
+.home{
+    
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background: url(../Images/library.png) no-repeat; 
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.box .searchBox{
+    margin-top: -20%;
+    position: relative;
+    background: var(--dark-color);
+    height: 400px;
+    width: 50%;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+    padding: 20px;
+}
+.searchBox h2{
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    color: #fff;
+}
+.filter{
+    background: #fff;
+    height: 250px;
+    padding: 1rem;
+    border-radius: 5px;
+    display: block;
+}
+.searchBox .filter input{
+    height: 55px;
+    width: 64%;
+    outline: none;
+    border: 2px solid #035BBB ;
+    border-radius: 5px;
+    padding: 0px 6px 0 20px;
+    font-size: 18px;
+    box-shadow: var(--box-shadow);
+    
+}
+select{
+    height: 55px;
+    width: 35%;
+    border-radius: 5px;
+    padding: 0px 6px 0 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #fff;
+    background: #035BBB;
+    border: 2px solid #035BBB ;
+    
+}
+option{
+    height: 60px;
+    width: 30%;
+    border-radius: 3px;
+    padding: 0px 6px 0 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #035BBB;
+    background: #fff;
+    border-bottom: 1px solid #035BBB ; 
+}
+select option:hover{
+    background-color: #035BBB;
+    color: #fff;
+}
+.filter .submit{
+    padding: 20px;
+}
+.searchBox .s_icon{
+    height: 55px;
+    width: 55px;
+    padding: 20px;
+    padding-top: 100px;
+    padding-right: 70px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;right: 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--main-clr);
+    cursor: pointer;
+}
+.filter p{
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1rem;
+    padding-left: 40%;
+    display: none;
+}
+.filter p.active{
+    display: block;
+}
+.searchBox .autocom-box{
+    padding: 8px 8px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+.autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    color: #2E8DED;
+    width: 95%;
+    cursor: default;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 2px solid rgba(0,0,0,0.12);
+    transition: 0.5s;
+}
+
+.autocom-box li:hover{
+    color: #130f40;
+    background: #eee;
+    font-size: 18px;   
+}
+
+.searchBox.active .autocom-box{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+
+.collection{
+    height: 350px;
+    background: linear-gradient(rgba(3, 92, 187, 0.729), rgba(3, 92, 187, 0.729)), url(../Images/library.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.collection .count{
+    position: absolute;
+    width: 80vw;
+    display: flex;
+    justify-content:space-around ;
+    gap: 10px;
+}
+.collection .count .countBx{
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    border-radius: 0.5em ;
+    background: #fff;
+    border-bottom: 10px solid var(--main-clr);
+}
+.count .countBx i{
+    color: var(--dark-color);
+    font-size: 2.5em;
+    text-align: center;
+}
+.count .countBx span.num{
+    color: var(--dark-color);
+    display: grid;
+    place-items: center;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+.count .countBx span.countText{
+    color: var(--dark-color);
+    font-size: 1em;
+    text-align: center;
+    pad: 0.7em 0;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .header .logo{
+        margin-right: 12rem;
+    
+    }
+    
+    .header .logo img{
+        overflow: hidden;
+        margin-top: 0.5rem;
+        height: 45px;
+    }
+    .home{
+        height: 500px;
+    }
+    .count{
+        width: 85vw;
+    }
+    .countBx{
+        height: 26vmin;
+        width: 26vmin;
+        font-size: 12px;
+    }
+    select{
+        height: 45px;
+        width: 25%;
+        padding: 0px 2px 0 2px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border: 1px solid #035BBB ;
+        
+    }
+    option{
+        height: 30px;
+        width: 25%;
+        padding: 0px 2px 0 1px;
+        font-size: 12px;
+        border-bottom: 1px solid #035BBB ; 
+    }
+    .box .searchBox{
+        width: 70%;
+    }
+    .searchBox .filter input{
+        height: 47px;
+        width: 74%;
+        
+    }
+}
+
+@media (max-width:850px){
+    #menu-btn{
+        display: inline-block;
+    }
+    #menu-1{
+        display: inline-block;
+    }
+    #home-icon2{
+        display: inline-block;
+    }
+    
+    #home-icon1{
+        display: none;
+    }
+    
+    .home{
+        height: 400px;
+    }
+    .header{
+        justify-content:space-between; 
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%; right:-110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background:#fff;
+    }
+    .header .navbar.active{
+        position: absolute;
+        top: 110%; right:2rem;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background:#fff;
+        transition: 0.5s linear;
+    }
+    .header .ImportantLink.active{
+        position: absolute;
+        top: 100%;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--box-shadow);
+        width: 25rem;
+        background-color: #fefefe;
+        transition: 0.5s;
+        display: block;
+    }
+    .ImportantLink .btn{
+        color: #fff;
+        background: #035BBB;
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+        border-top: 0;
+        border-bottom: 2px solid var(--main-clr);;
+    }
+    .header .logo{
+        margin-right: 6rem;
+        margin-left: 0;
+    }
+    
+    .header .home-icons{
+        margin-right: .6rem;
+    }
+    .collection{
+        height: 450px;
+    }
+    .collection .count{
+        width: 90vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .collection .count .countBx{
+        width: calc(50%-40px);
+        height: 30vmin;
+        font-size: 14px;
+    }
+    select{
+        height: 40px;
+        width: 25%;
+        padding: 0;
+        font-size: 12px;
+        letter-spacing: 0;
+        
+    }
+    option{
+        height: 20px;
+        width: 25%;
+        padding: 0;
+        font-size: 11px;
+    }
+    .searchBox .filter input{
+        height: 45px;
+        width: 74%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:480px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .box .searchBox{
+        position: relative;
+        height: 300px;
+        width: 65%;
+        position: absolute;
+        border-radius: 5px;
+        box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+        padding: 20px;
+    }
+    
+    .header .logo{
+        margin-right: 0.2rem;
+        margin-left: 0;
+    }
+    
+    .header .logo img{
+        overflow: hidden;
+        margin-top: 0.2rem;
+        height: 42px;
+    }
+    .collection{
+        height: 600px;
+    }
+    .collection .count{
+        gap: 15px
+    }
+    .collection .count .countBx{
+        width: 100%;
+        height: 25vmin;
+        font-size: 10px;
+    }
+    .searchBox h2{
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 25px;
+        letter-spacing: 0rem;
+    }
+    select{
+        height: 45px;
+        width: 25%;
+        padding: 0;
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+    option{
+        height: 30px;
+        width: 25%;
+        padding: 0;
+        font-size: 11px;
+    }
+    .box .searchBox{
+        width: 90%;
+        height: 360px;
+    }
+    .searchBox .filter input{
+        height: 45px;
+        width: 74%;
+        font-size: 14px;
+    }
+    .searchBox .s_icon{
+        height: 50px;
+        width: 50px;
+        padding: 20px;
+        padding-top: 77px;
+        padding-right: 60px;
+        line-height: 45px;
+    }
+}

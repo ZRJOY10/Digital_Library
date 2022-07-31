@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Digital  Library</title>
-    <link rel="stylesheet"  type="text/css" href="style.css">
-    <link rel="icon" href="./Images/logo-2.png" type="image/x-icon">
+    <link rel="icon" href="./Images/silde.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
+    <link rel="stylesheet" href="./Css/style.css">
+
 </head>
 <body>
 
@@ -17,20 +17,37 @@
 <header class="header">
 
 
-    <a href="index.html" class="logo"><img src="./Images/logo-2.png" alt=""></a>
+    <a href="index.html" class="logo"><img src="./Images/logo-ju.png" alt=""></a>
 
+    
+    <div class="home-icons" id="home-icon1">
+        <div class="fas fa-home"></div>
+    </div>
 
     <nav class="navbar menua" id="menu-1">
-        <a class="btn"  href=""><span>Learn</span> <i></i></a>
-        <a class="btn"  href=""><span>Write</span> <i></i></a>
-        <a class="btn"  href=""><span>Tutor</span> <i></i></a> 
-        <a class="btn"  href=""><span>Study Resources</span> <i></i></a>
-        <a class="btn"  href=""><span>About Us</span> <i></i></a>
-        <a class="btn"  href=""><span>Contact Us</span> <i></i></a>
+        <a class="btn"  href="">About Us</a>
+        <a class="btn"  href="">Catagories</a> 
+       
+        <div id="impBtn" >
+        <a class="btn "  href="#">Important Links ></a>
+        <div class="ImportantLink">
+            <a class="btn" href="#">Link-01</a>
+            <a class="btn" href="#">Link-02</a>
+            <a class="btn" href="#">Link-03</a>
+        </div>
+        </div>
+       
+        <a class="btn"  href="">Contact Us</a>
     </nav>
 
     <div class="icons">
+        <div class="fas fa-home" id="home-icon2"></div>
         <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-user" id="user-btn"></div>
+    </div>
+    <div class="user">
+        <a class="btn" href="#">Profile</a>
+        <a class="btn" href="#">Log Out</a>
     </div>
 </header>   
 
@@ -48,18 +65,54 @@
 <section class="box">
     <div class="searchBox">
         <h2>Digital Library</h2>
-        <input type="text" placeholder="Search your need....">
-        <div class="autocom-box">
-            <li>Digital Library</li>
-            <li>Jahangirnagar University</li>
-            <li>Rajshahi University</li>
-            <li>Dhaka University</li>
-            <li>How to learn Something New</li>
+        <div class="filter">
+                <select class="searchBy" required>
+                    <option value="Keyword">Keyword</option>
+                    <option value="Aurthor">Aurthor</option>
+                    <option value="Title">Title</option>
+                    <option value="Google Search">Google Search</option>
+                </select>
+                <input type="text" id="inputValue" placeholder="Search your need...." required>
+                <div class="s_icon"> <i class="fas fa-search"></i> </div>
+                <p> <i class="fa fa-arrow-up"></i> Please Fill Up the box..</p>
+                <div class="autocom-box">
+                    <li>Digital Library</li>
+                    <li>Jahangirnagar University</li>
+                    <li>Rajshahi University</li>
+                    <li>Dhaka University</li>
+                    <li>How to learn Something New</li>
+                </div>
         </div>
-        <div class="s_icon"> <i class="fas fa-search"></i> </div>
     </div>
 </section>
 <!-- search box end-->
+<!--Count box start-->
+<section class="collection">
+
+    <div class="count">
+        <div class="countBx">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="4000">000</span>
+            <span class="countText">Book</span>
+        </div>
+        <div class="countBx">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="2100">000</span>
+            <span class="countText">Journal</span>
+        </div>
+        <div class="countBx">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="3300">000</span>
+            <span class="countText">Thesis</span>
+        </div>
+        <div class="countBx">
+            <i class="fas fa-book"></i>
+            <span class="num" data-val="4400">000</span>
+            <span class="countText">Article/Research<br>paper</span>
+        </div>
+    </div>
+</section>
+<!--Count box end-->
 <script src="./Js/suggestions.js"></script>
 <script src="./Js/script.js"></script>
 </body>
