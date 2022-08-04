@@ -369,7 +369,63 @@ select option:hover{
     font-weight: 400;
     line-height: 1.2;
 }
+footer{
+    height: 200px;
+    background: var(--dark-color);
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 0 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .fbox{
+    background: transparent;
+    width: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    line-height: 3;
+    padding-left: 10%;
+}
 
+footer .fbox div{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5;
+    color: #fff;
+}
+footer .fbox div i{
+    font-size: 26px;
+    margin-right: 5px;
+    color: #fff;
+}
+footer .fbox img{
+    height: 120px;
+    padding-left: 15%;
+}
+footer .fbox p{
+    color: #fff;
+    letter-spacing: 1.1;
+    font-size: 14px;
+}
+
+.scroll{
+    opacity: 1;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #002853;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    z-index: 100;
+    box-sizing: content-box;
+}
 
 
 
@@ -436,6 +492,25 @@ select option:hover{
         height: 47px;
         width: 74%;
         
+    }
+    footer .fbox{
+        line-height: 2;
+    }
+    
+    footer .fbox div{
+        font-size: 14px;
+        letter-spacing: 1.2;
+    }
+    footer .fbox div i{
+        font-size: 22px;
+        margin-right: 3px;
+    }
+    footer .fbox img{
+        height: 100px;
+        padding-left: 10%;
+    }
+    footer .fbox p{
+        font-size: 12px;
     }
 }
 
@@ -614,5 +689,28 @@ select option:hover{
         padding-top: 77px;
         padding-right: 60px;
         line-height: 45px;
+    }
+    footer .fbox{
+        line-height: 2;
+        padding: 0.2rem;
+        margin: 0.2rem;
+        margin-top: 2rem;
+    }
+    
+    footer .fbox div{
+        padding-top: 1rem;
+        font-size: 11px;
+        letter-spacing: 1;
+    }
+    footer .fbox div i{
+        font-size: 12px;
+        margin-right: 1px;
+    }
+    footer .fbox img{
+        height: 80px;
+        padding-left: 5%;
+    }
+    footer .fbox p{
+        font-size: 10px;
     }
 }

@@ -25,6 +25,15 @@ document.querySelector('#impBtn').onclick = () =>{
     userBtn.classList.remove('active');
 }
 
+let scrollTop = document.querySelector(".scroll");
+scrollTop.addEventListener("click", function(){
+    window.scrollTo({
+        top:0,
+        left:0,
+        behavior:"smooth"
+    });
+});
+
 window.onscroll = () =>{
     menuBtn.classList.remove('active');
     userBtn.classList.remove('active');
